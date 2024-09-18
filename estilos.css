@@ -64,9 +64,11 @@ body {
     justify-content: flex-end;
     margin: auto;
 }
-.graficotabla table{
+
+.graficotabla table {
     width: 250px;
 }
+
 .calculograficotabla {
     height: auto;
     display: flex;
@@ -194,10 +196,12 @@ td {
     justify-content: center;
     margin: 25px 0px;
 }
-.operacion span{
+
+.operacion span {
     font-weight: normal !important;
     margin: 3px;
 }
+
 .operacion input {
     width: 80px;
     border: 2px solid #243a6910;
@@ -225,9 +229,11 @@ input[type="number"]::-webkit-outer-spin-button {
     justify-content: center;
     border-radius: 50px;
 }
-.showmorebtn:hover{
+
+.showmorebtn:hover {
     background-color: #4BBF5C;
 }
+
 .showmorebtn a {
     color: rgb(0, 0, 0);
     text-decoration: none;
@@ -304,19 +310,23 @@ label {
     display: block;
     /* Mostrar el contenido inicialmente */
 }
+
 #extra-content2 {
     display: block;
     /* Mostrar el contenido inicialmente */
 }
+
 #extra-content3 {
     display: block;
     /* Mostrar el contenido inicialmente */
 }
+
 #extra-content4 {
     display: block;
     /* Mostrar el contenido inicialmente */
 }
-.formula{
+
+.formula {
     width: auto;
     height: 100px;
 
@@ -329,32 +339,37 @@ label {
     font-weight: bold;
 
 }
+
 .fomrulauno,
 .fomrulados,
-.fomrulautres{
+.fomrulautres {
     width: auto;
     font-weight: 500;
 
 
 }
-.fomrulauno{
+
+.fomrulauno {
     font-size: 20px;
 }
-.fomrmuladosline{
+
+.fomrmuladosline {
     height: 1px;
     margin: 2px;
     background-color: #000000;
     width: 100px;
 }
 
-.formuladostop{
+.formuladostop {
     height: 20px;
     width: 100px;
     margin-top: 10px;
 }
-.formuladostop label{
+
+.formuladostop label {
     z-index: 999;
 }
+
 .grafico-circular {
     width: 100px;
     height: 100px;
@@ -373,7 +388,8 @@ label {
     font-weight: bold;
     color: #333;
 }
-.showmore1{
+
+.showmore1 {
     display: flex;
     flex-direction: column;
 }
@@ -382,12 +398,12 @@ label {
 form {
     max-width: auto;
     margin: 0 auto;
-    
+
 }
 
 .question {
     margin-bottom: 15px;
-position: relative;
+    position: relative;
     right: 0px;
 }
 
@@ -419,7 +435,7 @@ button {
     margin: 20px auto;
     padding: 10px 20px;
     background-color: #007bff;
-    color:#ffffff;
+    color: #ffffff;
     border: none;
     cursor: pointer;
     height: 100px;
@@ -428,6 +444,7 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+
 #calculoRapido {
     background-color: #f7f3f3b0;
     padding: 15px;
@@ -488,11 +505,14 @@ button:hover {
     font-weight: 500;
 }
 
-.ejercicioscontainer table, .ejercicioscontainer th,.ejercicioscontainer td {
+.ejercicioscontainer table,
+.ejercicioscontainer th,
+.ejercicioscontainer td {
     border: 1px solid #000;
 }
 
-.ejercicioscontainer th,.ejercicioscontainer td {
+.ejercicioscontainer th,
+.ejercicioscontainer td {
     padding: 10px;
 }
 
@@ -533,7 +553,8 @@ button:hover {
     margin-bottom: 20px;
 }
 
-.ejercicioscontainer table th, .ejercicioscontainer table td {
+.ejercicioscontainer table th,
+.ejercicioscontainer table td {
     border: 1px solid #03A61C;
     padding: 12px;
     text-align: center;
@@ -564,14 +585,15 @@ button:hover {
 .ejercicioscontainer em {
     color: #004d40;
 }
-.detalles label{
+
+.detalles label {
     text-align: center !important;
     width: 100%;
     font-weight: normal !important;
 }
 
 
-.ejercicioscontainer2{
+.ejercicioscontainer2 {
     width: 70%;
 }
 
@@ -583,11 +605,14 @@ button:hover {
     font-weight: 500;
 }
 
-.ejercicioscontainer2 table, .ejercicioscontainer2 th,.ejercicioscontainer2 td {
+.ejercicioscontainer2 table,
+.ejercicioscontainer2 th,
+.ejercicioscontainer2 td {
     border: 1px solid #000;
 }
 
-.ejercicioscontainer2 th,.ejercicioscontainer2 td {
+.ejercicioscontainer2 th,
+.ejercicioscontainer2 td {
     padding: 10px;
 }
 
@@ -629,22 +654,28 @@ button:hover {
     margin-bottom: 20px;
 }
 
-.ejercicioscontainer2 table th, .ejercicioscontainer2 table td {
+.ejercicioscontainer2 table th,
+.ejercicioscontainer2 table td {
     border: 1px solid #03a61b;
     padding: 12px;
     text-align: center;
 }
-.ejercicioscontainer2 td{
+
+.ejercicioscontainer2 td {
     height: 10px !important;
     margin-top: 0px;
 }
+
 .ejercicioscontainer2 table th {
     background-color: #03a61b8a;
     color: #000000;
     font-weight: bold;
 
 }
-.ejercicioscontainer2 table,.ejercicioscontainer2 tbody,.ejercicioscontainer2 tr{
+
+.ejercicioscontainer2 table,
+.ejercicioscontainer2 tbody,
+.ejercicioscontainer2 tr {
     height: 5px;
     margin: auto;
     margin: 0px 5px;
@@ -659,6 +690,8 @@ button:hover {
 
 .ejercicioscontainer2 ol li {
     margin-bottom: 10px;
+    margin-left: -30px;
+    
 }
 
 .ejercicioscontainer2 strong {
@@ -668,8 +701,122 @@ button:hover {
 .ejercicioscontainer2 em {
     color: #004d40;
 }
-.detalles label{
+
+.detalles label {
     text-align: center !important;
     width: 100%;
     font-weight: normal !important;
+}
+.ejercicioscontainer2 table ,.ejercicioscontainer2 span{
+    margin-left: 0px;
+    font-weight: normal;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .calculadoracontenedor{
+        width: 80%;
+        font-size: 12px !important;
+    }
+    .ejercicios{
+        flex-direction: column;
+        align-content: center;
+    }
+    .ejercicioscontainer{
+        width: 80%;
+        margin: 5px;
+    }
+    .ejercicioscontainer2 ol{
+        margin-left: 0px;
+        line-height: 1.1;
+    }
+    .ejercicioscontainer2 ol li {
+        margin-bottom: 10px;
+        margin-left: -30px;
+        text-align: left;
+    }
+    .katex-html{
+        font-weight: 12px;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .main{
+        width: 100%;
+    }
+    .grafico{
+        flex-direction: column;
+    }
+    .calculadoras{
+        width: 100%;
+    }
+    .calculadoracontenedor{
+        width:90%;
+        font-size: 12px !important;
+        padding: 5px;
+
+    }
+    .operacion{
+        flex-direction: column;
+    }
+    .showmoredistribution{
+        flex-direction: column;
+        align-items: center;
+    }
+    .showmore1{
+        height: auto;
+    }
+    .ejercicios{
+        width: 90vw;
+        flex-direction: column;
+        align-content: center;
+        gap: 5px;
+    }
+    .ejercicioscontainer{
+        width: 95%;
+        margin: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 10px;
+    }
+    .ejercicioscontainer2 ol{
+        margin-left: 0px;
+        line-height: 1.1;
+    }
+    .ejercicioscontainer2 ol li {
+        margin-bottom: 10px;
+        margin-left: -30px;
+        text-align: left;
+    }
+    .katex-html{
+        font-weight: 12px;
+    }
+    #calculoRapido{
+        margin: 10px;
+    }
+    form{
+        width: 80%;
+    }
+    form table {
+        width: 100px;
+    }
+    h1{
+        width: 80%;
+        text-align: center;
+    }
+    .showmorebtn{
+        width: 300px !important;
+    }
+    h2{
+        text-align: center;
+    }
+    .ejercicioscontainer h2{
+        margin-top: 10px;
+    }
+    .ejercicioscontainer2{
+        width: 95%;
+        padding: 5px;
+    }
 }
