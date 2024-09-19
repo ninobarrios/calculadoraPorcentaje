@@ -803,7 +803,6 @@ button:hover {
     }
 
     .showmorebtn {
-        width: 300px !important;
         font-size: 16px;
     }
 
@@ -849,6 +848,7 @@ button:hover {
 
     form table {
         width: 100px;
+        margin: 0px auto;
     }
 
     h1 {
@@ -870,9 +870,11 @@ button:hover {
         margin: 10px 0px;
         padding: 25px;
     }
-.ejercicioscontainer2 h2{
-    margin: 20px 0px;
-}
+
+    .ejercicioscontainer2 h2 {
+        margin: 20px 0px;
+    }
+
     .encabezado {
         width: 100vw;
     }
@@ -881,4 +883,12 @@ button:hover {
         font-size: 18px;
         margin: 10px 0px;
     }
+
+    .ejercicioscontainer2 ol li {
+        font-size: 16px !important;
+    }
+    .calculograficotablacontent{
+        margin: 0px;
+    }
+
 }
