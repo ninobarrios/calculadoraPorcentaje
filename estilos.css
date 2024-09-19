@@ -913,5 +913,11 @@ button:hover {
     .calculograficotablacontent {
         margin: 0px;
     }
-
+    #myPieChart,#myPieChart2,#myPieChart3,#myPieChart4{
+        height: 250px !important;
+        width: 250px !important;
+    }
+    .showmore1{
+        width: 100%;
+    }
 }
