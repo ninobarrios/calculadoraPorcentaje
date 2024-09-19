@@ -725,6 +725,9 @@ button:hover {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .main{
+        width: 85vw;
+    }
     .calculadoracontenedor {
         width: 80%;
         font-size: 12px !important;
@@ -755,6 +758,25 @@ button:hover {
         font-weight: 12px;
     }
 
+    .grafico {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .graficotabla {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .calculograficotabla {
+        margin: 0px;
+        width: 100%;
+    }
+
+    .calculograficotablacontent {
+        margin: 0;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -774,7 +796,7 @@ button:hover {
 
     .grafico {
         flex-direction: column;
-        width: 100vw;
+        width: 100%;
     }
 
     .calculadoras {
@@ -887,7 +909,8 @@ button:hover {
     .ejercicioscontainer2 ol li {
         font-size: 16px !important;
     }
-    .calculograficotablacontent{
+
+    .calculograficotablacontent {
         margin: 0px;
     }
 
