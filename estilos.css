@@ -4,6 +4,8 @@ body {
     padding: 0;
     font-family: "Raleway", sans-serif;
     box-sizing: border-box;
+    overflow-x: hidden;
+
 }
 
 body {
@@ -127,7 +129,7 @@ td {
 
 .calculograficotablacontent span {
     color: white;
-    font-weight: normal; 
+    font-weight: normal;
     font-weight: 16px;
 }
 
@@ -180,7 +182,7 @@ td {
     padding: 10px 50px;
     position: relative;
     margin: 10px 0px;
-    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 .calculadoracontenedor h2 {
@@ -648,7 +650,7 @@ button:hover {
 }
 
 .ejercicioscontainer2 p {
-    font-size:16px;
+    font-size: 16px;
     line-height: 1.6;
     margin-bottom: 20px;
     color: #000000;
@@ -699,7 +701,7 @@ button:hover {
     margin-bottom: 10px;
     margin-left: -30px;
     color: #000000;
-    
+
 }
 
 .ejercicioscontainer2 strong {
@@ -715,78 +717,104 @@ button:hover {
     width: 100%;
     font-weight: normal !important;
 }
-.ejercicioscontainer2 table ,.ejercicioscontainer2 span{
+
+.ejercicioscontainer2 table,
+.ejercicioscontainer2 span {
     margin-left: 0px;
     font-weight: normal;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    .calculadoracontenedor{
+    .calculadoracontenedor {
         width: 80%;
         font-size: 12px !important;
     }
-    .ejercicios{
+
+    .ejercicios {
         flex-direction: column;
         align-content: center;
     }
-    .ejercicioscontainer{
+
+    .ejercicioscontainer {
         width: 80%;
         margin: 5px;
     }
-    .ejercicioscontainer2 ol{
+
+    .ejercicioscontainer2 ol {
         margin-left: 0px;
         line-height: 1.1;
     }
+
     .ejercicioscontainer2 ol li {
         margin-bottom: 10px;
         margin-left: -30px;
         text-align: left;
     }
-    .katex-html{
+
+    .katex-html {
         font-weight: 12px;
     }
 
 }
 
 @media only screen and (max-width: 768px) {
-    .main{
+
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Raleway", sans-serif;
+        box-sizing: border-box;
+        width: 100vw;
+    }
+
+    .main {
         width: 100%;
     }
-    .grafico{
+
+    .grafico {
         flex-direction: column;
+        width: 100vw;
+    }
+
+    .calculadoras {
         width: 100%;
     }
-    .calculadoras{
-        width: 100%;
-    }
-    .calculadoracontenedor{
-        width:80%;
+
+    .calculadoracontenedor {
+        width: 80%;
         font-size: 12px !important;
         border-radius: 10px;
         padding: 20px;
         position: relative;
     }
-    .operacion{
+
+    .operacion {
         flex-direction: column;
     }
-    .showmoredistribution{
+
+    .showmoredistribution {
         flex-direction: column;
         align-items: center;
     }
-    .showmore1{
+
+    .showmore1 {
         height: auto;
     }
-    .showmorebtn{
-        width: 300px !important; 
+
+    .showmorebtn {
+        width: 300px !important;
         font-size: 16px;
     }
-    .ejercicios{
+
+    .ejercicios {
         width: 90vw;
         flex-direction: column;
         align-content: center;
         gap: 5px;
     }
-    .ejercicioscontainer{
+
+    .ejercicioscontainer {
         width: 95%;
         margin: 5px;
         display: flex;
@@ -795,45 +823,60 @@ button:hover {
         flex-direction: column;
         padding: 10px;
     }
-    .ejercicioscontainer2 ol{
+
+    .ejercicioscontainer2 ol {
         margin-left: 0px;
         line-height: 1.1;
     }
+
     .ejercicioscontainer2 ol li {
         margin-bottom: 10px;
         margin-left: -30px;
         text-align: left;
     }
-    .katex-html{
+
+    .katex-html {
         font-weight: 12px;
     }
-    #calculoRapido{
+
+    #calculoRapido {
         margin: 10px;
     }
-    form{
+
+    form {
         width: 80%;
     }
+
     form table {
         width: 100px;
     }
-    h1{
+
+    h1 {
         width: 80%;
         text-align: center;
     }
 
-    h2{
+    h2 {
         text-align: center;
     }
-    .ejercicioscontainer h2{
+
+    .ejercicioscontainer h2 {
         margin-top: 10px;
     }
-    .ejercicioscontainer2{
+
+    .ejercicioscontainer2 {
         width: 95%;
-        padding: 5px;
+        box-sizing: border-box;
+        margin: 10px 0px;
+        padding: 25px;
     }
-    .encabezado{
+.ejercicioscontainer2 h2{
+    margin: 20px 0px;
+}
+    .encabezado {
         width: 100vw;
     }
+
     .operacion span {
         font-size: 18px;
         margin: 10px 0px;
