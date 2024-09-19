@@ -117,6 +117,7 @@ td {
     width: 10%;
     height: 10%;
     text-align: center;
+    font-weight: bold;
 }
 
 .cell {
@@ -455,6 +456,8 @@ button:hover {
 #calculoRapido h2 {
     text-align: center;
     width: 100%;
+    margin: 20px 0px;
+    font-weight: bold;
 }
 
 .list-spacing {
@@ -554,9 +557,11 @@ button:hover {
 
 .ejercicioscontainer table th,
 .ejercicioscontainer table td {
-    border: 1px solid #03A61C;
+    border: 1px solid #beccc080;
     padding: 12px;
-    text-align: center;
+    text-align: left;
+    font-weight: 500;
+    color: #000;
 }
 
 .ejercicioscontainer table th {
@@ -626,7 +631,7 @@ button:hover {
 
 
 .ejercicioscontainer2 {
-    margin: 20px 0;
+    margin: 10px 0;
     background-color: #ffffff;
     border-radius: 8px;
     padding: 40px;
@@ -639,12 +644,14 @@ button:hover {
     margin-bottom: 20px;
     color: #000000;
     width: 100%;
+    font-weight: 550;
 }
 
 .ejercicioscontainer2 p {
-    font-size: 1.1em;
+    font-size:16px;
     line-height: 1.6;
     margin-bottom: 20px;
+    color: #000000;
 }
 
 .ejercicioscontainer2 table {
@@ -658,6 +665,7 @@ button:hover {
     border: 1px solid #03a61b;
     padding: 12px;
     text-align: center;
+    color: #000000;
 }
 
 .ejercicioscontainer2 td {
@@ -690,11 +698,12 @@ button:hover {
 .ejercicioscontainer2 ol li {
     margin-bottom: 10px;
     margin-left: -30px;
+    color: #000000;
     
 }
 
 .ejercicioscontainer2 strong {
-    color: #004d40;
+    color: #000000;
 }
 
 .ejercicioscontainer2 em {
