@@ -754,15 +754,17 @@ button:hover {
     }
     .grafico{
         flex-direction: column;
+        width: 100%;
     }
     .calculadoras{
         width: 100%;
     }
     .calculadoracontenedor{
-        width:90%;
+        width:80%;
         font-size: 12px !important;
-        padding: 5px;
-
+        border-radius: 10px;
+        padding: 20px;
+        position: relative;
     }
     .operacion{
         flex-direction: column;
@@ -773,6 +775,10 @@ button:hover {
     }
     .showmore1{
         height: auto;
+    }
+    .showmorebtn{
+        width: 300px !important; 
+        font-size: 16px;
     }
     .ejercicios{
         width: 90vw;
@@ -814,9 +820,7 @@ button:hover {
         width: 80%;
         text-align: center;
     }
-    .showmorebtn{
-        width: 300px !important;
-    }
+
     h2{
         text-align: center;
     }
@@ -826,5 +830,12 @@ button:hover {
     .ejercicioscontainer2{
         width: 95%;
         padding: 5px;
+    }
+    .encabezado{
+        width: 100vw;
+    }
+    .operacion span {
+        font-size: 18px;
+        margin: 10px 0px;
     }
 }
