@@ -310,22 +310,18 @@ label {
 
 #extra-content {
     display: block;
-    /* Mostrar el contenido inicialmente */
 }
 
 #extra-content2 {
     display: block;
-    /* Mostrar el contenido inicialmente */
 }
 
 #extra-content3 {
     display: block;
-    /* Mostrar el contenido inicialmente */
 }
 
 #extra-content4 {
     display: block;
-    /* Mostrar el contenido inicialmente */
 }
 
 .formula {
@@ -725,9 +721,10 @@ button:hover {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    .main{
+    .main {
         width: 85vw;
     }
+
     .calculadoracontenedor {
         width: 80%;
         font-size: 12px !important;
@@ -913,11 +910,16 @@ button:hover {
     .calculograficotablacontent {
         margin: 0px;
     }
-    #myPieChart,#myPieChart2,#myPieChart3,#myPieChart4{
+
+    #myPieChart,
+    #myPieChart2,
+    #myPieChart3,
+    #myPieChart4 {
         height: 250px !important;
         width: 250px !important;
     }
-    .showmore1{
+
+    .showmore1 {
         width: 100%;
     }
 }

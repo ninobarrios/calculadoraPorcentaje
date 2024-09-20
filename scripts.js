@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const discountPercentageSpan = document.getElementById('discount-percentage');
     const errorMessage = document.getElementById('error-message');
 
-    // Crear la tabla con 10x10 celdas
     for (let i = 0; i < 10; i++) {
         let row = document.createElement('tr');
         for (let j = 0; j < 10; j++) {
@@ -19,17 +18,14 @@ document.addEventListener('DOMContentLoaded', function () {
         tbody.appendChild(row);
     }
 
-    // Actualizar la tabla basada en el valor del input1
     function updateTable() {
         const value = parseInt(input1.value, 10);
 
-        // Validar el valor ingresado
         if (isNaN(value) || value < 0 || value > 100) {
             errorMessage.textContent = 'Ingrese un valor entre 0 y 100.';
             return;
         }
 
-        // Si es válido, limpiar mensaje de error y actualizar la tabla
         errorMessage.textContent = '';
         const cells = document.querySelectorAll('.cell');
         cells.forEach(cell => cell.style.backgroundColor = '');
@@ -40,11 +36,9 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
 
-        // Mostrar el valor en el label
         percentageDisplay.textContent = `% de 100`;
     }
 
-    // Validar y actualizar input2
     function validarInput2() {
         let valor = parseFloat(input2.value);
         if (isNaN(valor) || valor < 0 || valor > 100) {
@@ -56,24 +50,21 @@ document.addEventListener('DOMContentLoaded', function () {
         calcularPorcentaje();
     }
 
-    // Calcular el porcentaje y mostrar el resultado en el input de resultado
     function calcularPorcentaje() {
         const percent = parseFloat(input2.value);
         const number = parseFloat(input3.value);
         if (!isNaN(percent) && !isNaN(number)) {
             const result = (percent / 100) * number;
-            resultado.value = result.toFixed(2); // Mostrar el resultado con dos decimales
+            resultado.value = result.toFixed(2); 
         } else {
-            resultado.value = ''; // Limpiar si los valores no son válidos
+            resultado.value = ''; 
         }
     }
 
-    // Escuchar cambios en los inputs y actualizar
     input1.addEventListener('input', updateTable);
     input2.addEventListener('input', validarInput2);
     input3.addEventListener('input', calcularPorcentaje);
 
-    // Actualizar tabla y porcentaje al cargar la página
     updateTable();
     calcularPorcentaje();
 });
@@ -89,20 +80,16 @@ document.addEventListener('DOMContentLoaded', function () {
         const discountValue = parseFloat(input2.value);
         const productPrice = parseFloat(input3.value);
 
-        // Actualiza el porcentaje y el precio
         discountPercentageSpan.textContent = `${discountValue}%`;
         productPriceSpan.textContent = `$${productPrice}`;
 
-        // Calcula el monto del descuento
         const discountAmount = (productPrice * (discountValue / 100)).toFixed(2);
         discountAmountSpan.textContent = `$${discountAmount}`;
     }
 
-    // Actualiza el caso práctico cuando cambien los valores de los inputs
     input2.addEventListener('input', updateDiscountDetails);
     input3.addEventListener('input', updateDiscountDetails);
 
-    // Inicializa el valor de los spans al cargar la página
     updateDiscountDetails();
 });
 document.addEventListener("DOMContentLoaded", function () {
@@ -169,7 +156,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const input3 = document.getElementById("input3");
     const resultado = document.getElementById("resultado");
 
-    // Función para actualizar los elementos con una clase específica
     function updateLabels(className, value) {
         const labels = document.querySelectorAll(className);
         labels.forEach(label => {
@@ -177,18 +163,16 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Función para calcular el resultado y actualizar los labels
     function updateValues() {
         const percentage = parseFloat(input2.value) || 0;
         const number = parseFloat(input3.value) || 0;
         const result = (percentage / 100) * number;
 
-        // Actualizar las etiquetas correspondientes
-        updateLabels('.input2-value-label', `${percentage}`);  // Actualiza todas las etiquetas que usan input2
-        updateLabels('.input3-value-label', `${number}`);        // Actualiza todas las etiquetas que usan input3
-        updateLabels('.resultado-value-label', `${result.toFixed(2)}`); // Actualiza todas las etiquetas que usan el resultado
+        updateLabels('.input2-value-label', `${percentage}`);  
+        updateLabels('.input3-value-label', `${number}`);        
+        updateLabels('.resultado-value-label', `${result.toFixed(2)}`); 
 
-        resultado.value = result.toFixed(2);  // Mostrar el resultado en el campo de texto
+        resultado.value = result.toFixed(2);  
     }
 
     input2.addEventListener("input", updateValues);
@@ -198,16 +182,15 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function obtenerNumero() {
-    // Recuperar los valores de porcentaje y total
     var porcentaje = document.getElementById("input2").value;
     var total = document.getElementById("input3").value;
 
-    porcentaje = parseFloat(porcentaje) || 0; // Usa 0 si el valor no es un número
-    total = parseFloat(total) || 0; // Usa 0 si el valor no es un número
+    porcentaje = parseFloat(porcentaje) || 0; 
+    total = parseFloat(total) || 0; 
 
     var resultado = (porcentaje / 100) * total;
 
-    document.getElementById("resultado").textContent = resultado.toFixed(2); // Formatear a 2 decimales
+    document.getElementById("resultado").textContent = resultado.toFixed(2); 
 }
 
 
@@ -218,14 +201,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const input3ValueLabel = document.querySelector('.input3-value-label');
     const ctx = document.getElementById('myPieChart').getContext('2d');
 
-    // Crear el gráfico
     let pieChart = new Chart(ctx, {
         type: 'pie',
         data: {
-            labels: ['% Aplicado', 'Restante'],  // Añade las etiquetas para la leyenda
+            labels: ['% Aplicado', 'Restante'],  
             datasets: [{
                 label: 'Valores',
-                data: [0, 0],  // Inicializa con valores en 0
+                data: [0, 0],  
                 backgroundColor: ['#fcae11', '#38c958'],
                 hoverOffset: 4
             }]
@@ -242,7 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             let total = pieChart.data.datasets[0].data.reduce((a, b) => a + b, 0);
                             let value = tooltipItem.raw;
                             let percentage = ((value / total) * 100).toFixed(2);
-                            return `${tooltipItem.label}: ${value} (${percentage}%)`;  // Muestra el porcentaje y el valor
+                            return `${tooltipItem.label}: ${value} (${percentage}%)`;  
                         }
                     }
                 }
@@ -257,21 +239,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const descuentoAplicado = (porcentaje / 100) * precio;
         const restante = precio - descuentoAplicado;
 
-        // Actualizar las etiquetas de valores en la página
         input2ValueLabel.textContent = `${porcentaje}%`;
         input3ValueLabel.textContent = `${precio}`;
 
-        // Actualizar los datos del gráfico
         pieChart.data.datasets[0].data = [descuentoAplicado, restante];
         
         pieChart.update();
     };
 
-    // Asignar eventos a los inputs para actualizar el gráfico en tiempo real
     input2.addEventListener('input', updateChart);
     input3.addEventListener('input', updateChart);
 
-    // Inicializar el gráfico con los valores iniciales
     updateChart();
 });
 
@@ -298,12 +276,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const ctx = document.getElementById('myPieChart2').getContext('2d');
 
-    // Crear el gráfico circular
     const myPieChart2 = new Chart(ctx, {
         type: 'pie',
         data: {
             datasets: [{
-                data: [0, 100], // Valores iniciales
+                data: [0, 100], 
                 backgroundColor: ['#fcae11', '#38c958'],
                 borderWidth: 1
             }]
@@ -351,12 +328,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 label.textContent = resultadototal.toFixed(2);
             });
 
-            // Actualiza el gráfico circular
             const partePorcentaje = (parte * 100) / resultadototal;
             const restante = 100 - partePorcentaje;
             myPieChart2.data.datasets[0].data = [partePorcentaje, restante];
 
-            // Actualiza las etiquetas del gráfico
             myPieChart2.data.labels = [
                 `% Aplicado: (${partePorcentaje.toFixed(2)}%) ${parte.toFixed(2)} `,
                 `Restante: (${restante.toFixed(2)}%) ${(resultadototal - parte).toFixed(2)} `
@@ -377,13 +352,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 label.textContent = '';
             });
 
-            // Resetea el gráfico circular
             myPieChart2.data.datasets[0].data = [0, 100];
             myPieChart2.update();
         }
     }
 
-    // Inicializar el gráfico con los valores del input
     calcularResultado();
     porcentajebox2.addEventListener('input', calcularResultado);
     parteporcentajebox2.addEventListener('input', calcularResultado);
@@ -414,20 +387,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const ctx = document.getElementById('myPieChart3').getContext('2d');
 
-    // Función para obtener el valor numérico de un elemento de etiqueta
     function getLabelValue(labelElement) {
         const value = parseFloat(labelElement.textContent);
         return isNaN(value) ? 0 : value;
     }
 
-    // Crear el gráfico circular
     const myPieChart3 = new Chart(ctx, {
         type: 'pie',
         data: {
-            labels: ['Restante', 'Parte'], // Etiquetas personalizadas para la leyenda
+            labels: ['Restante', 'Parte'], 
             datasets: [{
                 label: 'Distribución',
-                data: [0, 100], // Valores iniciales (para ser actualizados)
+                data: [0, 100], 
                 backgroundColor: ['#fcae11', '#38c958'],
                 borderWidth: 1
             }]
@@ -445,7 +416,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             return dataset.data.map((data, index) => {
                                 const percentage = ((data / total) * 100).toFixed(2);
                                 return {
-                                    text: `${percentage}%`, // Solo muestra el porcentaje en la leyenda
+                                    text: `${percentage}%`, 
                                     fillStyle: dataset.backgroundColor[index],
                                     strokeStyle: dataset.borderColor ? dataset.borderColor[index] : dataset.backgroundColor[index],
                                     lineWidth: dataset.borderWidth,
@@ -462,7 +433,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             let total = myPieChart3.data.datasets[0].data.reduce((a, b) => a + b, 0);
                             let value = tooltipItem.raw;
                             let percentage = ((value / total) * 100).toFixed(2);
-                            return `${tooltipItem.label}: (${percentage}%) ${value.toFixed(2)} `;  // Muestra el valor y el porcentaje
+                            return `${tooltipItem.label}: (${percentage}%) ${value.toFixed(2)} `;  
                         }
                     }
                 }
@@ -492,7 +463,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 label.textContent = resultadototal.toFixed(2);
             });
 
-            // Actualiza el gráfico circular
             const partePorcentaje = (parte * 100) / porcentaje;
             myPieChart3.data.datasets[0].data = [porcentaje - parte, parte];
             myPieChart3.update();
@@ -510,13 +480,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 label.textContent = '';
             });
 
-            // Resetea el gráfico circular
             myPieChart3.data.datasets[0].data = [0, 100];
             myPieChart3.update();
         }
     }
 
-    // Inicializar el gráfico con el valor del input
     calcularResultado();
     porcentajebox3.addEventListener('input', calcularResultado);
     parteporcentajebox3.addEventListener('input', calcularResultado);
@@ -545,7 +513,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const ctx = document.getElementById('myPieChart4').getContext('2d');
 
-    let resultadototal = 0; // Variable global para almacenar el valor de resultadototal
+    let resultadototal = 0; 
 
     const myPieChart4 = new Chart(ctx, {
         type: 'pie',
@@ -572,11 +540,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 tooltip: {
                     callbacks: {
                         label: function (tooltipItem) {
-                            const value = tooltipItem.raw; // Valor del segmento
-                            const total = myPieChart4.data.datasets[0].data.reduce((a, b) => a + b, 0); // Total de todos los valores del gráfico
-                            const percentage = (value / total * 100).toFixed(2); // Porcentaje del valor en el gráfico
+                            const value = tooltipItem.raw; 
+                            const total = myPieChart4.data.datasets[0].data.reduce((a, b) => a + b, 0); 
+                            const percentage = (value / total * 100).toFixed(2); 
 
-                            // Devolver el texto formateado para el tooltip
                             return `${tooltipItem.label}: (${percentage}%)`;
                         }
                     }
@@ -594,7 +561,6 @@ document.addEventListener('DOMContentLoaded', function () {
         input3ValueLabels4.forEach(label => label.textContent = '');
         partePorcentajeLabels42.forEach(label => label.textContent = '');
 
-        // Resetear gráfico
         myPieChart4.data.datasets[0].data = [0, 100];
         myPieChart4.update();
     }
@@ -605,7 +571,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const parteExtra = parseFloat(parteporcentajebox42.value);
 
         if (!isNaN(porcentaje) && !isNaN(parte) && !isNaN(parteExtra) && porcentaje > 0) {
-            resultadototal = (parte * parteExtra) / porcentaje; // Calcular y almacenar resultadototal
+            resultadototal = (parte * parteExtra) / porcentaje; 
             resultadototalbox4.value = resultadototal.toFixed(2);
             labelResultadototalbox4.textContent = resultadototal.toFixed(2);
 
@@ -617,21 +583,17 @@ document.addEventListener('DOMContentLoaded', function () {
             input3ValueLabels4.forEach(label => label.textContent = resultadototal.toFixed(2));
             partePorcentajeLabels42.forEach(label => label.textContent = parteExtra); 
 
-            // Calcular porcentaje basado en parte y parteExtra
             const total = (parte * 100) / porcentaje;
             const parteExtraPorcentaje = (parte * parteExtra) / porcentaje;
-            // Actualizar gráfico circular
             myPieChart4.data.datasets[0].data = [parteExtra, 100-parteExtra];
             myPieChart4.update();
 
-            // Mostrar el porcentaje en el label
             partePorcentajeLabel.textContent = `Total: ${total.toFixed(2)} / Porcentaje: ${parteExtra.toFixed(2)}% / Resultado: ${parteExtraPorcentaje.toFixed(2)}`;
         } else {
             manejarError();
         }
     }
 
-    // Inicializar cálculo
     calcularResultado();
     porcentajebox4.addEventListener('input', calcularResultado);
     parteporcentajebox4.addEventListener('input', calcularResultado);
