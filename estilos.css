@@ -93,8 +93,8 @@ body {
 
 .calculograficotablacontent label {
     margin: 10px 0;
-    font-weight: 500;
-    color: white;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
     padding-right: 10px;
     font-size: 16px;
 }
@@ -128,9 +128,10 @@ td {
 }
 
 .calculograficotablacontent span {
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: normal;
     font-weight: 16px;
+    font-weight: bold;
 }
 
 .usos {
@@ -223,13 +224,15 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .showmorebtn {
     width: 100%;
-    height: 30px;
-    background-color: #ffffff;
+    height: 50px;
     border: 2px solid #03A61C;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50px;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #000000;
+    font-weight: bold;
 }
 
 .showmorebtn:hover {
@@ -564,7 +567,7 @@ button:hover {
 
 .ejercicioscontainer table th {
     background-color: #03A61C;
-    color: #ffffff;
+    color: #000000;
     font-weight: bold;
 }
 
