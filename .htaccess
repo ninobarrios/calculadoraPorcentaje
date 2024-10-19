@@ -1,4 +1,0 @@
-RewriteEngine On
-RewriteCond %{HTTP_HOST} ^www\.carcularporcentaje\.com [NC,OR]
-RewriteCond %{HTTP_HOST} ^carcularporcentaje\.com [NC]
-RewriteRule ^(.*)$ https://www.calculadoraporcentajes.online/$1 [L,R=301]
